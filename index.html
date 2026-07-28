@@ -961,7 +961,7 @@
           </div>
           <div class="card">
             <form id="contactForm">
-              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+              <input type="hidden" name="access_key" value="7bbfbc67-6596-4171-905e-a95d4b985309" />
               <input type="hidden" name="subject" value="New portfolio contact message" />
               <input type="checkbox" name="botcheck" style="display:none;" />
               <div class="form-row">
@@ -1642,7 +1642,7 @@
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const accessKeyInput = contactForm.querySelector('input[name="access_key"]');
+    const accessKeyInput = contactForm.querySelector('input[name="7bbfbc67-6596-4171-905e-a95d4b985309"]');
     if (!accessKeyInput || accessKeyInput.value.includes('YOUR_WEB3FORMS')) {
       formStatus.textContent = 'Form not connected yet — add your Web3Forms access key in the code.';
       formStatus.style.color = '#FF5757';
