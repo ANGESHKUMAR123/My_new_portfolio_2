@@ -1642,7 +1642,7 @@
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const accessKeyInput = contactForm.querySelector('input[name="7bbfbc67-6596-4171-905e-a95d4b985309"]');
+    const accessKeyInput = contactForm.querySelector('input[name="access_key"]');
     if (!accessKeyInput || accessKeyInput.value.includes('YOUR_WEB3FORMS')) {
       formStatus.textContent = 'Form not connected yet — add your Web3Forms access key in the code.';
       formStatus.style.color = '#FF5757';
