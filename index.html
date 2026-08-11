@@ -35,7 +35,7 @@
     z-index:-1;
     background:
       linear-gradient(180deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0) 40%, rgba(5, 5, 5, 0) 100%),
-      url("assest/image/bg-red-waves1.png");
+      url("assest/image/comman_image/bg-red-waves1.png");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -210,9 +210,9 @@
   .hero-dot { width:8px; height:8px; border-radius:999px; background:#3ddc84; }
   .hero-title { font-family:'Sora',sans-serif; font-weight:1000; font-size:clamp(50px,6.5vw,96px); line-height:1.02; letter-spacing:-1.5px; margin:0 0 22px; text-shadow: 0 4px 30px rgba(0,0,0,.5); }
   .hero-title .grad { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-  .hero-role { font-family:'JetBrains Mono',monospace; font-size:clamp(10px,2.3vw,25px); color:wheat; margin-bottom:24px; }
+  .hero-role { font-family:'JetBrains Mono',monospace; font-size:clamp(10px,2.3vw,25px); color:rgb(248, 4, 4); margin-bottom:24px; }
   .hero-role .cursor { animation: blink 1s step-start infinite; }
-  .hero-desc { color:white; font-size:20px; line-height:1.8; max-width:640px; margin:0 0 36px; }
+  .hero-desc { color:rgb(250, 7, 7); font-size:20px; line-height:1.8; max-width:640px; margin:0 0 36px; }
   .typed-cursor { color: var(--accent2); font-weight:400; animation: blink 1s step-start infinite; }
   .hero-actions { display:flex; gap:16px; flex-wrap:wrap; }
 
@@ -328,7 +328,7 @@
   .projects-grid.switching { opacity:0; transform: translateX(24px); }
 
   /* ---- Full-bleed photo-card style project cards (static, no motion) ---- */
-  .project-card { position:relative; display:block; border-radius:26px; overflow:hidden; padding:0; cursor:pointer; border:1px solid var(--border); background:var(--surface2); box-shadow:0 20px 40px -26px rgba(0,0,0,.7); aspect-ratio: 16 / 7.5; }
+  .project-card { position:relative; display:block; border-radius:26px; overflow:hidden; padding:0; cursor:pointer; border:1px solid var(--border); background:var(--surface2); box-shadow:0 20px 40px -26px rgba(0,0,0,.7); aspect-ratio: 16 / 8.6; }
   .projects-grid .project-card:first-child { grid-column: auto; }
   .project-card:hover { border-color: rgba(255,45,45,.4); }
 
@@ -363,10 +363,21 @@
   @media (max-width:640px){ .projects-grid, .projects-grid.switching { grid-template-columns:1fr!important; } }
 
   /* ---- Project slider (single centered card) ---- */
-  .projects-slider { display:flex; align-items:center; gap:18px; width:100%; max-width:1080px; margin:0 auto; }
+  .projects-slider { display:flex; align-items:center; gap:22px; width:100%; max-width:1360px; margin:0 auto; }
   .projects-viewport { flex:1; min-width:0; display:flex; justify-content:center; overflow:hidden; padding:10px 4px; }
-  .projects-viewport > div { width:100%; max-width:900px; }
-  .projects-viewport .project-card { width:100%; max-width:900px; transition: transform .45s cubic-bezier(.16,.84,.44,1), opacity .45s ease; }
+  .projects-viewport > div { width:100%; max-width:1220px; }
+  .projects-viewport .project-card { width:100%; max-width:1220px; transition: transform .45s cubic-bezier(.16,.84,.44,1), opacity .45s ease; }
+  .proj-nav-btn { width:54px; height:54px; font-size:18px; }
+  @media (max-width:1400px) and (min-width:1181px){
+    .projects-slider { max-width:1160px; }
+    .projects-viewport > div, .projects-viewport .project-card { max-width:1020px; }
+  }
+  @media (max-width:1180px) and (min-width:641px){
+    .projects-slider { max-width:920px; }
+    .projects-viewport > div, .projects-viewport .project-card { max-width:820px; }
+    .project-card { aspect-ratio: 16 / 10; }
+    .project-title { font-size:22px; }
+  }
   .proj-nav-btn { flex:none; width:48px; height:48px; border-radius:50%; border:1px solid var(--border); background:var(--surface); color:var(--text); font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition: all .25s; }
   .proj-nav-btn:hover { border-color:var(--accent); background:var(--surface2); color:var(--accent2); transform:translateY(-2px); }
   .proj-nav-btn:active { transform:translateY(0) scale(.94); }
@@ -374,12 +385,36 @@
   .proj-dot { width:8px; height:8px; padding:0; border-radius:50%; background:var(--surface2); border:1px solid var(--border); cursor:pointer; transition: all .25s; }
   .proj-dot.active { width:22px; border-radius:6px; border-color:transparent; background:linear-gradient(135deg, var(--accent), var(--accent2)); }
   @media (max-width:640px){
+    #projects { padding:70px 4px; }
     .projects-slider { gap:8px; }
-    .proj-nav-btn { width:38px; height:38px; font-size:13px; }
-    .project-card { aspect-ratio: 3 / 4.6; min-height:420px; }
-    .project-title { font-size:19px; }
-    .project-desc { -webkit-line-clamp:5; }
+    .proj-nav-btn { width:40px; height:40px; font-size:14px; }
+    .project-card { aspect-ratio: 3 / 5.4; min-height:500px; }
+    .project-title { font-size:21px; }
+    .project-desc { -webkit-line-clamp:6; }
   }
+
+  /* ---- Hobbies ---- */
+  #hobbies { padding:70px 14px; }
+  #hobbies .section-wrap { max-width:90%; width:90%; padding:0; margin:0 auto; }
+  .hobbies-sub { color:var(--muted); font-size:15.5px; line-height:1.8; max-width:680px; margin:-20px 0 36px; }
+  .hobbies-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .hobby-card { position:relative; display:block; overflow:hidden; padding:0; cursor:pointer; border:1px solid var(--border); box-shadow:0 20px 40px -26px rgba(0,0,0,.7); aspect-ratio: 16 / 10.5; border-radius:0; }
+  .hobby-card:hover { border-color: rgba(255,45,45,.4); }
+  .hobby-art { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; background:var(--surface2); }
+  .hobby-art img { width:100%; height:100%; display:block; object-fit:cover; transform:scale(1.01); transition: transform .5s cubic-bezier(.16,.84,.44,1); }
+  .hobby-card:hover .hobby-art img { transform:scale(1.06); }
+  .hobby-overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(5,5,5,0) 28%, rgba(5,5,5,.5) 58%, rgba(3,3,3,.94) 100%); pointer-events:none; opacity:0; transition: opacity .35s ease; }
+  .hobby-body { position:absolute; left:0; right:0; bottom:0; z-index:2; padding:22px 24px 20px; display:flex; flex-direction:column; gap:4px; opacity:0; pointer-events:none; transition: opacity .35s ease; }
+  @media (hover:hover){
+    .hobby-card:hover .hobby-overlay,
+    .hobby-card:hover .hobby-body { opacity:1; }
+  }
+  .hobby-card.revealed .hobby-overlay,
+  .hobby-card.revealed .hobby-body { opacity:1; }
+  .hobby-title { font-weight:700; font-size:19px; font-family:'Sora',sans-serif; line-height:1.3; color:#fff; }
+  .hobby-desc { font-size:14px; color:rgba(255,255,255,.9); font-family:'Inter',sans-serif; margin:0; }
+  @media (max-width:1180px){ .hobbies-grid { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:640px){ .hobbies-grid { grid-template-columns:1fr; } .hobby-card { aspect-ratio:16/11; } }
 
   /* ---- Certifications ---- */
   #certifications { padding:70px 40px; }
@@ -406,7 +441,7 @@
   .contact-photo-wrap img { width:100%; max-width:520px; display:block; object-fit:contain; }
 
   .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
-  .form-input, .form-textarea { width:100%; padding:14px 16px; border-radius:12px; border:1px solid var(--border); background:var(--surface2); color:var(--text); font-size:15px; }
+  .form-input, .form-textarea { width:100%; padding:14px 16px; border-radius:12px; border:1px solid var(--border); background: linear-gradient(120deg, rgba(34, 6, 6, 0.384), rgba(8, 8, 8, 0.418)); backdrop-filter: blur(22px) saturate(150%); -webkit-backdrop-filter: blur(22px) saturate(150%); color:white; font-size:15px; }
   .form-textarea { resize:vertical; margin-bottom:18px; }
 
   /* ---- Footer ---- */
@@ -471,7 +506,7 @@
       padding:60px 24px 80px;
       background-image:
         linear-gradient(180deg, rgba(5, 5, 5, 0.247) 0%, rgba(5, 5, 5, 0.534) 45%, rgba(5, 5, 5, 0.021) 78%, rgba(5, 5, 5, 0) 100%),
-        url("assest/image/classic_image.png");
+        url("assest/image/comman_image/mobile_bg.png");
       background-position: center center;
       background-size: cover;
     }
@@ -579,7 +614,7 @@
   .about-photo-wrap:hover .about-photo img { transform: scale(1.06) rotate(.5deg); }
 
   /* ---- Flowing light-line border: a soft streak that continuously travels the card edge ---- */
-  .hoverlift, .flow-border { position:relative; }
+  /* .hoverlift, .flow-border { position:relative; }
   .hoverlift::after, .flow-border::after {
     content:'';
     position:absolute; inset:-1px;
@@ -598,7 +633,7 @@
   }
   .hoverlift:hover::after, .flow-border:hover::after { opacity:1; }
   @property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
-  @keyframes spinAngle { to { --angle: 360deg; } }
+  @keyframes spinAngle { to { --angle: 360deg; } } */
 
   /* About photo card gets the same flowing border line */
   .about-photo { position:relative; }
@@ -857,7 +892,7 @@
 
   <aside class="sidebar intro" id="sidebar">
     <div class="sidebar-profile">
-      <img src="assest/image/image 3.png" alt="Angeshkumar P" />
+      <img src="assest/image/comman_image/image 3.png" alt="Angeshkumar P" />
       <div>
         <div class="name">Angeshkumar P</div>
         <div class="role">Data Analyst</div>
@@ -869,6 +904,7 @@
       <button class="navitem" data-target="skills">Skills</button>
       <button class="navitem" data-target="experience">Experience</button>
       <button class="navitem" data-target="education">Education</button>
+      <button class="navitem" data-target="hobbies">Hobbies</button>
       <button class="navitem" data-target="projects">Projects</button>
       <button class="navitem" data-target="certifications">Certifications</button>
       <button class="navitem" data-target="contact">Contact</button>
@@ -915,7 +951,7 @@
         <div class="about-grid">
           <div class="about-photo-wrap">
             <div class="about-photo">
-              <img src="assest/image/about2.png" alt="Angeshkumar P" />
+              <img src="assest/image/comman_image/about2.png" alt="Angeshkumar P" />
             </div>
            <div class="float-badge fb-1" > <span style="color:white; font-weight:500;">7.06</span> <span style="color:white;">CGPA</span></div>
            <div class="float-badge fb-2" ><span style="color:white; font-size:12px;">Final year · </span><span style="font-weight:700;">B.E CSE 2026</span></div>
@@ -933,6 +969,7 @@
               <div><span class="k">Phone: </span><span class="v">+91 93451 06980</span></div>
               <div><span class="k">Email: </span><span class="v">angeshkumar499@gmail.com</span></div>
               <div><span class="k">Languages: </span><span class="v">Tamil, English</span></div>
+              <div><span class="k">Hobbies: </span><span class="v">Drawing, Traveling, Watching movie, Upcycling & Paper Craft</span></div>
             </div>
             <div class="about-actions">
               <a class="btn-primary ripple-el magnetic" style="padding:14px 28px; display:inline-block; text-decoration:none;" href="assest/Angeshkumar_resume.pdf" download="Angeshkumar_P_Resume.pdf">Download CV ↓</a>
@@ -995,16 +1032,18 @@
           <div class="edu-timeline" id="eduTimeline"></div>
           <div class="edu-photo-wrap">
             <div class="edu-photo">
-              <img src="assest/image/education-photo.png" alt="Education" />
+              <img src="assest/image/comman_image/education-photo.png" alt="Education" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
+  
+
     <section id="projects">
       <div class="section-wrap ">
-        <div class="eyebrow">05 — Projects</div>
+        <div class="eyebrow">06 — Projects</div>
         <h2 class="section-title">Featured projects</h2>
         <div class="projects-tabs" id="projectsTabs">
           <button class="proj-tab active" data-cat="ml">Machine Learning</button>
@@ -1023,13 +1062,22 @@
 
     <section id="certifications">
       <div class="section-wrap">
-        <div class="eyebrow">06 — Certifications</div>
+        <div class="eyebrow">07 — Certifications</div>
         <h2 class="section-title">Courses &amp; certifications</h2>
         <div class="projects-tabs" id="certTabs">
           <button class="proj-tab active" data-cat="cert">Certifications</button>
           <button class="proj-tab" data-cat="course">Courses</button>
         </div>
         <div class="certs-grid" id="certsGrid"></div>
+      </div>
+    </section>
+
+      <section id="hobbies">
+      <div class="section-wrap">
+        <div class="eyebrow">05 — Hobbies</div>
+        <h2 class="section-title">Beyond work</h2>
+        <p class="hobbies-sub">A few things I enjoy outside of data and code — hover or tap a tile to see what it's about.</p>
+        <div class="hobbies-grid" id="hobbiesGrid"></div>
       </div>
     </section>
 
@@ -1045,7 +1093,7 @@
   <div class="section-wrap reveal-fb">
     <div class="card flow-border motivation-card">
       <div class="motivation-photo-box">
-        <img src="assest/image/motivation_image.png" alt="Driven by growth" />
+        <img src="assest/image/comman_image/motivation_image.png" alt="Driven by growth" />
       </div>
       <div class="motivation-content">
         <div class="eyebrow">Driven by growth</div>
@@ -1063,7 +1111,7 @@
 
     <section id="contact">
       <div class="section-wrap">
-        <div class="eyebrow">07 — Contact</div>
+        <div class="eyebrow">08 — Contact</div>
         <div class="card resume-card hoverlift" style="margin-bottom:36px;">
           <div>
             <div class="resume-card-title">Want the full picture?</div>
@@ -1075,7 +1123,7 @@
         <div class="contact-grid">
           <div class="contact-info-col">
             <div class="contact-photo-wrap">
-              <img src="assest/image/message_image.png" alt="Get in touch" />
+              <img src="assest/image/comman_image/message_image.png" alt="Get in touch" />
             </div>
           </div>
           <div class="card">
@@ -1128,7 +1176,7 @@
             <div>&#9993; angeshkumar499@gmail.com</div>
             <div>&#9742; +91 93451 06980</div>
             <div>&#128205; Pachampalayam, Tirupur</div>
-            <div class="footer-avail">&#9679; Available for internship opportunities</div>
+            <div class="footer-avail">&#9679; Available for Job opportunities</div>
           </div>
         </div>
       </div>
@@ -1184,6 +1232,7 @@
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "education", label: "Education" },
+    { id: "hobbies", label: "Hobbies" },
     { id: "projects", label: "Projects" },
     { id: "certifications", label: "Certifications" },
     { id: "contact", label: "Contact" },
@@ -1321,11 +1370,11 @@
   ];
 
   const PROJECT_ART = {
-    breach: `<img src="assest/image/breach1.png" alt="Data breach ransomware detection" />`,
-    phishing: `<img src="assest/image/email1.png" alt="AI phishing email detection alert" />`,
-    face: `<img src="assest/image/face.png" alt="Face recognition biometric scan" />`,
-    Equipment_Health: `<img src="assest/image/maintenance1.png" alt="Face recognition biometric scan" />`,
-    My_website: `<img src="assest/image/portfolio4.png" alt="Face recognition biometric scan" />`,
+    breach: `<img src="assest/image/project/breach.png" alt="Data breach ransomware detection" />`,
+    phishing: `<img src="assest/image/project/email.png" alt="AI phishing email detection alert" />`,
+    face: `<img src="assest/image/project/face.png" alt="Face recognition biometric scan" />`,
+    Equipment_Health: `<img src="assest/image/project/maintenance.png" alt="Face recognition biometric scan" />`,
+    My_website: `<img src="assest/image/project/portfolio.png" alt="Face recognition biometric scan" />`,
   };
 
   // ---- Build sidebar nav is already static in HTML, but wire labels via NAV for consistency ----
@@ -2035,6 +2084,42 @@
         <div class="hl-arrow">Jump to section →</div>
       </div>
     `).join('');
+  })();
+
+  // ---- Hobbies section ----
+    
+  const HOBBY_BADGE = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.1 2.2 4 6.1 4c2 0 3.5 1 4.9 2.7C12.4 5 13.9 4 15.9 4c3.9 0 5.7 4.1 4.1 7.8C20 16.4 12 21 12 21z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  (function hobbies() {
+    const grid = document.getElementById('hobbiesGrid');
+    if (!grid) return;
+    const items = [
+      { title: 'Drawing', desc: 'Sketching in pencil and ink to slow down and see detail differently.', img: 'assest/image/hobbies/drawing.jpg' },
+      { title: 'Traveling', desc: 'Exploring new places and cultures for fresh perspective and inspiration.', img: 'assest/image/hobbies/traveling.jpg' },
+      { title: 'Watching Movies', desc: 'Following stories and storytelling craft across genres and film-makers.', img: 'assest/image/hobbies/movies.jpg' },
+      { title: 'Upcycling & Paper Craft', desc: 'Turning waste materials and paper into small, useful, creative pieces.', img: 'assest/image/hobbies/papercraft.png' },
+      { title: 'Gaming', desc: 'Strategy and puzzle games that sharpen focus, logic and quick decisions."', img: 'assest/image/hobbies/gaming.jpg' },
+      { title: 'Planting', desc: 'Growing and caring for plants — a calm, hands-on break from screens."', img: 'assest/image/hobbies/planting.jpg' },
+    ];
+    grid.innerHTML = items.map(it => `
+      <div class="hobby-card hoverlift">
+        <div class="hobby-art"><img src="${it.img}" alt="${it.title}" loading="lazy" /></div>
+        <div class="hobby-overlay"></div>
+        <div class="hobby-body">
+          <div class="hobby-title">${it.title}</div>
+          <p class="hobby-desc">${it.desc}</p>
+        </div>
+      </div>
+    `).join('');
+    grid.querySelectorAll('.hobby-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const supportsHover = window.matchMedia('(hover: hover)').matches;
+        if (!supportsHover) {
+          const wasRevealed = card.classList.contains('revealed');
+          grid.querySelectorAll('.hobby-card.revealed').forEach(c => c.classList.remove('revealed'));
+          if (!wasRevealed) card.classList.add('revealed');
+        }
+      });
+    });
   })();
 
   // ---- Services section content ----
