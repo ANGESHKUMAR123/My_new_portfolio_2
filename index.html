@@ -1289,7 +1289,7 @@
       desc: "Machine-learning system to detect and predict cyber security breaches by analyzing network and security data patterns, with feature engineering and predictive modeling.",
       icon: "breach",
       category: "ml",
-      github: "https://github.com/ANGESHKUMAR123/cyber-breach-detection",
+      github: "https://github.com/ANGESHKUMAR123/Cyber-Hacking-Breaches-Detection-And-Prediction-Using-Machine-Learning.git",
     },
     {
       title: "AI-based phishing email detection & prediction",
@@ -1298,7 +1298,7 @@
       desc: "Classifies email messages as spam or legitimate using a labeled dataset and the XGBoost algorithm, tuned for effective phishing detection.",
       icon: "phishing",
       category: "ml",
-      github: "https://github.com/ANGESHKUMAR123/phishing-email-detection",
+      github: "https://github.com/ANGESHKUMAR123/DEVELOP-AN-AI-SYSTEM-TOI-DENTIFY-AND-BLOCK-PHISHING-EMAILS.git",
     },
     {
       title: "Login using face recognition",
@@ -1307,7 +1307,7 @@
       desc: "Secure login system built on biometric face recognition, deployed on Ubuntu, aimed at reliable and high-accuracy authentication.",
       icon: "face",
       category: "web",
-      github: "https://github.com/ANGESHKUMAR123/face-recognition-login",
+      github: "https://github.com/ANGESHKUMAR123/Login-using-face-recognition-.git",
     },
     {
       title: "AI-Powered Predictive Maintenance System for Industrial Equipment",
@@ -1316,7 +1316,7 @@
       desc: "An AI-powered predictive maintenance system that analyzes industrial equipment data to detect potential failures, predict maintenance needs, reduce downtime, improve operational efficiency, and optimize maintenance schedules using machine learning algorithms.",
       icon: "Equipment_Health",
       category: "ml",
-      github: "https://github.com/ANGESHKUMAR123/predictive-maintenance-system",
+      github: "https://github.com/ANGESHKUMAR123/AI-Powered-Predictive-Maintenance-System-for-Industrial-Equipment.git",
     },
     {
       title: "Personal  Portfolio Website",
@@ -1325,7 +1325,7 @@
       desc: "A modern, responsive portfolio website showcasing my skills, projects, education, certifications, and experience with interactive animations, 3D video introduction, glassmorphism design, smooth navigation, and an engaging user experience for recruiters.",
       icon: "My_website",
       category: "web",
-      github: "https://github.com/ANGESHKUMAR123/face-recognition-login",
+      github: "https://github.com/ANGESHKUMAR123/My_new_portfolio_2.git",
     },
   ];
 
@@ -1557,10 +1557,10 @@
   projNextBtn.addEventListener('click', () => shiftProject(1));
   projPrevBtn.addEventListener('click', () => shiftProject(-1));
 
-  document.querySelectorAll('.proj-tab').forEach(btn => {
+  document.querySelectorAll('#projectsTabs .proj-tab').forEach(btn => {
     btn.addEventListener('click', () => {
       if (btn.dataset.cat === activeProjectCat) return;
-      document.querySelectorAll('.proj-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('#projectsTabs .proj-tab').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       activeProjectCat = btn.dataset.cat;
       activeProjectIndex = 0;
