@@ -68,8 +68,8 @@
 
   /* ---- Full-screen pages ---- */
  html { scroll-snap-type: y proximity; }
-  .main section { min-height: calc(100vh - 64px); display:flex; flex-direction:column; justify-content:center; scroll-margin-top:84px; scroll-snap-align:start; box-sizing:border-box; opacity:0; transform: translateX(70px); transition: opacity .8s cubic-bezier(.16,.84,.44,1), transform .8s cubic-bezier(.16,.84,.44,1); }
-  .main section.in-view { opacity:1; transform: translateX(0); }
+  .main section { min-height: calc(100vh - 64px); display:flex; flex-direction:column; justify-content:center; scroll-margin-top:84px; scroll-snap-align:start; box-sizing:border-box; opacity:0; transition: opacity .5s ease; }
+  .main section.in-view { opacity:1; }
   .main section#home { opacity:1; transform:none; min-height: calc(108vh - 50px); }
   footer { scroll-snap-align:start; }
 
@@ -1281,7 +1281,7 @@
     
   ];
 
-  const projects = [
+   const projects = [
     {
       title: "Cyber hacking breach detection & prediction",
       year: "2026",
